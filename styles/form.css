@@ -1,0 +1,43 @@
+form {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: stretch;
+
+    width: 100%;
+}
+
+label, legend {
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;    
+}
+
+input:not([type="radio"]), select, form button {
+    border: 2px solid #000000;
+    padding: 0.625rem 0.5rem;
+}
+
+input::placeholder, select {
+    font-family: 'Nunito Sans', sans-serif;
+    color: #97A1AC;
+    font-size: 0.875rem;
+}
+
+input[type="radio"] {
+    width: 1.125rem;
+    height: 1.125rem;
+}
+
+input[type="radio"] + label {
+    width: auto;
+    margin: 0 0 0 0.75rem;
+    font-weight: 400;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
