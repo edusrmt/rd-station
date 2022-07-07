@@ -1,10 +1,10 @@
-.cards-wrapper {
-    margin-top: 1.5rem;
-}
-
 .card {
     padding: 1.5rem;
     box-shadow: 0 0.25rem 0.75rem 0 rgba(33, 36, 41, 0.14);
+}
+
+.card.active-card {
+    display: block;
 }
 
 .card img {
@@ -16,25 +16,53 @@
     margin: 1rem 0;
 }
 
-.dots-wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 2.25rem;
-    margin-bottom: 3.25rem;
+@media screen and (max-width: 767px) {
+    .cards-wrapper {
+        margin-top: 1.5rem;
+    }
+
+    .card {
+        display: none;
+    }
+
+    .dots-wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-top: 2.25rem;
+        margin-bottom: 3.25rem;
+    }
+    
+    .dot {
+        cursor: pointer;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        border: 2px solid #CFD3D8;
+    }
+    
+    .active-dot, .dot:hover {
+        background-color: #19C1CE;
+        border: none;
+    }
 }
 
-.dot {
-    cursor: pointer;
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-    border: 2px solid #CFD3D8;
-}
+@media screen and (min-width: 768px) {
+    .cards-wrapper {
+        margin-top: 4rem;
+        margin-bottom: 7.5rem;
+    }
+    
+    .cards-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 1.5rem;
+    }
 
-.active-dot, .dot:hover {
-    background-color: #19C1CE;
-    border: none;
+    .dots-wrapper {
+        display: none;
+    }
 }

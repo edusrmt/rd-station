@@ -7,7 +7,7 @@ form {
     width: 100%;
 }
 
-label, legend {
+label {
     font-weight: 700;
     margin-top: 1rem;
     margin-bottom: 0.5rem;    
@@ -18,10 +18,15 @@ input:not([type="radio"]), select, form button {
     padding: 0.625rem 0.5rem;
 }
 
+input:not([type="radio"]), select {
+    height: 2.5rem;
+}
+
 input::placeholder, select {
     font-family: 'Nunito Sans', sans-serif;
     color: #97A1AC;
     font-size: 0.875rem;
+    line-height: 1.25rem;
 }
 
 input[type="radio"] {
@@ -40,4 +45,14 @@ input[type="radio"] + label {
     align-items: center;
     margin-top: 0.5rem;
     margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    label + .radio-group {
+        margin-top: 0;
+    }
+
+    input + .radio-group {
+        margin-top: 1rem;
+    }
 }

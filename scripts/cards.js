@@ -28,14 +28,14 @@ function updateCards() {
 
     let i;
     for (i = 0; i < cards.length; i++) {
-        cards[i].style.display = "none";
+        cards[i].className = cards[i].className.replace(" active-card", "");
     }
 
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active-dot", "");
     }
 
-    cards[cardIndex - 1].style.display = "block";
+    cards[cardIndex - 1].className += " active-card";
     dots[cardIndex - 1].className += " active-dot";
     cardIndex++;
 }
