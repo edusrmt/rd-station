@@ -17,7 +17,7 @@
             <nav>
                 <ul>
                     <li>Menu 1</li>
-                    <li>
+                    <li onclick="toggleDropdown()">
                         Menu 2
                         <img src="./images/icons/down-arrow.svg" alt="Seta para baixo">
                     </li>
@@ -33,7 +33,25 @@
                     <img src="./images/icons/right-arrow.svg" alt="Seta apontando para a direita">
                 </button>
             </div>
-        </div>               
+        </div>  
+        <div id="dropdown">
+            <div class="column">
+                <h5>Metodologia</h5>
+                <p>Tudo sobre Inbound Marketing</p>
+            </div>
+            <div class="column">
+                <h5>Cursos</h5>
+                <p>RD University</p>
+                <p>Introdução ao Inbound Marketing</p>
+                <p>RD Station Marketing Basic</p>
+            </div>
+            <div class="column">
+                <h5>Ferramentas</h5>
+                <p>Avalie seu funil de vendas</p>
+                <p>Compare suas métricas de Email Marketing</p>
+                <p>Calcule o ROI do RD Station Marketing</p>
+            </div>
+        </div>             
     </header>
 
     <main>
@@ -207,7 +225,7 @@
         <section id="demo">
             <div class="content">
                 <h3>Entenda melhor como o RD Station Marketing funciona na prática</h3>
-                <button class="secondary"  onclick="toggleModal()">
+                <button class="secondary" onclick="toggleModal()">
                     <p>Assista a demonstração</p>
                     <img src="./images/icons/small-play.svg" alt="Ícone de play">
                 </button>

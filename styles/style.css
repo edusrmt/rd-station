@@ -56,6 +56,10 @@ header .logo-default {
     height: 25px;
 }
 
+header #dropdown {
+    display: none;
+}
+
 main {
     margin-top: 4rem;
 }
@@ -69,6 +73,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 }
 
 #menu .action-buttons {
@@ -475,6 +480,10 @@ h4 {
         background-color: #F1F3F5;
     }
 
+    #dropdown.open {
+        display: none;
+    }
+
     /* INTRO SECTION */
     #intro {
         padding-top: 2.5rem;
@@ -608,6 +617,53 @@ h4 {
 
     .mobile-only {
         display: none;
+    }
+
+    header #dropdown {
+        position: fixed;
+        top: 4rem;
+        right: 0;
+    
+        display: none;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: stretch;
+        gap: 2.5rem;
+    
+        padding: 1.5rem;
+        background-color: #FFFFFF;
+        box-shadow: 0 0.25rem 0.75rem 0 rgba(33, 36, 41, 0.14);
+    }
+    
+    #dropdown.open {
+        display: flex;
+    }
+    
+    #dropdown .column {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    
+        padding: 0;
+    }
+    
+    .column p {
+        margin-top: 1rem;
+        cursor: pointer;
+    }
+    
+    #dropdown h5 {
+        font-family: 'Darker Grotesque', sans-serif;
+        line-height: 110%;
+        font-weight: 800;
+        font-size: 1.125rem;
+        text-transform: uppercase;
+    
+        width: 100%;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #CFD3D8;
+        color: #19C1CE;
     }
     
     /* MENU */
