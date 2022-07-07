@@ -51,7 +51,12 @@
                 <h4>Comece seus 10 dias de teste grátis do RD Station Marketing!</h4>
             <p class="subtitle-xs">Não precisa cadastrar cartão de crédito. 😉</p>
             <hr />
-            <form action="https://app.rdstation.com.br/signup" method="post">
+
+            <div class="success">
+                <h4>Obrigado! Entraremos em contato</h4>
+            </div>
+
+            <form onsubmit="return validateForm()" method="post">
                 <label for="name">Diga, qual seu nome?</label>
                 <input type="text" name="name" id="name" placeholder="Insira seu nome" required>
 
@@ -87,14 +92,14 @@
 
                 <label>Qual o site da sua empresa?</label>
                 <div class="radio-group">
-                    <input type="radio" name="site" id="site" required>
-                    <label for="site">Meu site é</label>
+                    <input type="radio" name="website" id="has-site" required>
+                    <label for="has-site">Meu site é</label>
                 </div>                
 
-                <input type="url" name="website" id="website" placeholder="Insira o endereço do seu site" required>
+                <input type="url" name="site" id="site" placeholder="Insira o endereço do seu site">
 
                 <div class="radio-group">
-                    <input type="radio" name="site" id="no-site" required>
+                    <input type="radio" name="website" id="no-site" required>
                     <label for="no-site">Ainda não tenho site</label>
                 </div>                
 
@@ -313,5 +318,6 @@
 
     <script src="./scripts/cards.js"></script>
     <script src="./scripts/menu.js"></script>
+    <script src="./scripts/form.js"></script>
 </body>
 </html>

@@ -112,6 +112,10 @@ main {
     background-color: #CFD3D8;
 }
 
+#form .success {
+    display: none;
+}
+
 #form ul {
     color: #7E8A98;
     margin-top: 0.5rem;
@@ -357,7 +361,6 @@ footer {
     flex-direction: column;    
     background-color: #19C1CE;
 
-    
     padding-bottom: 2.5rem;
 }
 
